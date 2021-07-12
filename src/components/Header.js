@@ -9,8 +9,13 @@ function Header(props) {
     }
     
     let findInfro = () => {
-    let text = props.nowInput.trim();
-    props.getInfo(text);
+        let re = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/
+        let text = props.nowInput.trim();
+        if (re.test(text)){
+        props.getInfo(text);
+        }else{
+            alert("wrong input");
+        }
     }
    
 
@@ -18,7 +23,7 @@ function Header(props) {
         <header className={classes.header}>
             <h1>IP Address Tracker</h1>
             <div className={classes.inputBlock}>
-                <input placeholder={"Search for any IP address or domain"} value={props.nowInput} pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" onChange={onInputChange} ref={newInput} />
+                <input placeholder={"Search for any IP address or domain"} value={props.nowInput} onChange={onInputChange} ref={newInput} />
                 <button onClick={findInfo}></button>
             </div>
         </header>
