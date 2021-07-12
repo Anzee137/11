@@ -7,7 +7,11 @@ function Header(props) {
         let text = newInput.current.value;
         props.changeInput(text);
     }
-
+    
+    let findInfro = () => {
+    let text = props.nowInput.trim();
+    props.getInfo(text);
+    }
    
 
     return (
