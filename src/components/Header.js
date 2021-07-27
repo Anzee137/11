@@ -8,7 +8,7 @@ function Header(props) {
         props.changeInput(text);
     }
     
-    let findInfro = () => {
+    let findInfoClick = () => {
         let re = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/
         let text = props.nowInput.trim();
         if (re.test(text)){
@@ -24,7 +24,7 @@ function Header(props) {
             <h1>IP Address Tracker</h1>
             <div className={classes.inputBlock}>
                 <input placeholder={"Search for any IP address or domain"} value={props.nowInput} onChange={onInputChange} ref={newInput} />
-                <button onClick={findInfo}></button>
+                <button onClick={findInfoClick}></button>
             </div>
             <div>
                 <a href="https://github.com/Atryom-Bohaturou/IpAddres-Tracker-React-Redux">Github</a>
