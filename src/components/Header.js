@@ -26,6 +26,9 @@ function Header(props) {
                 <input placeholder={"Search for any IP address or domain"} value={props.nowInput} onChange={onInputChange} ref={newInput} />
                 <button onClick={findInfo}></button>
             </div>
+            <div>
+                <a href="https://github.com/Atryom-Bohaturou/IpAddres-Tracker-React-Redux">Github</a>
+            </div>
         </header>
     );
 }
